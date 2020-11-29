@@ -1,0 +1,56 @@
+Problema04 (miniespecificación -use ciclo haga-hasta)
+Generar una solución que permita ingresar jugadores de fútbol; por cada jugador se debe solicitar:
+Nombre el jugador
+Posición en el campo de juego
+Edad
+Estatura
+El ciclo de ingreso de información deberá terminar cuando el usuario lo decida. Se debe imprimer el siguiente reporte (usar una cadena de acumulación):
+
+Listado de Jugadores
+
+Alexander Dominguez -Arquero-, edad 32, estatura 1.95
+Xavier Arreaga -Defensa-, edad 24, estatura 1.85
+Moisés Caicedo -Mediocentro-, edad 19, estatura 1.88
+Ángel Mena -Delantero-, edad 32, estatura 1.75
+Michael Estrada -Delantero-, edad 27, estatura 1.93 Promedio de edades: 26.8 Promedio de estaturas: 1.87
+1.inicio
+//variables
+2.contador, i[0-n]
+3.contador <-- 1
+4.bandera <-- true 
+5. nombre ,x(50)[{1-9},{a-z},{A-Z}, {/}, {BS}]<--- " "
+6.posicion, x(50)[{1-9},{a-z},{A-Z}, {/}, {BS}]<--- " "
+7.edad,i[0-100]
+8.estatura, d[0-n]
+9.acomulacionEdad, i[0-n]
+10.acomulacionEstatura, i[0-n]
+11.promedioEstatura, d[0-n]
+12.promedioEdad, i[0-100] 
+13.cadenaFinal, x(50)[{1-9},{a-z},{A-Z}, {/}, {BS}]<--- " "
+
+//estructura logica 
+
+14.haga_hasta
+15.	Escribir"ingrese el nombre del jugador"
+16.	leer nombre
+17.	Escribir"ingrese la posicion en el campo de juego"
+18.	leer posicion
+19.	Escribir"ingrese la edad del jugador"
+20.	leer"edad"
+21.	Escribir"ingrese la estatura"
+22.	leer estatura  
+23.	acomulacionEdad<--acomulacionEdad+edad
+24.	acomulacionEstatura<--acomulacionEstatura+estarura
+25.	contador<--contador +1
+26.	cadenaFinal<--cadenaFinal + "-"+ nombre + "_, edad" + ", estatura " + estatura"n"
+27.	escribir "para no ingresar mas jugadores digite un numero menor a 0"
+28.	leer desicion
+29.	si desicion < 0 entoces
+30.		bandera <-- false
+31.	fin si
+32. Fin haga_hasta(bandera)
+33.promedioEstatura <-- acomulacionEstatura / contador 
+34.promedioEdad <-- acomulacionEdad / contador
+35. cadenaFinal <-- cadenaFinal +"promedio de edades: \n" + promedioEdad + "\n"+ promedio de Estatura:\n" + promedioEstatura
+36.cadenaFinal
+37.Fin
